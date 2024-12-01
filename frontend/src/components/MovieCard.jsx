@@ -25,5 +25,5 @@ return(
 export default MovieCard
 
 MovieCard.propTypes = {
-    movie: PropTypes.string.isRequired, // Declare the 'display' prop and mark it as required
+    movie: PropTypes.string.isRequired
   };
