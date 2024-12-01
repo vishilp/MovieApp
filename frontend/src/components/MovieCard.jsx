@@ -1,4 +1,5 @@
 import PropTypes from "prop-types";
+import '../css/MovieCard.css'
 
 function MovieCard({movie}){
 
