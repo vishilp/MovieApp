@@ -23,14 +23,29 @@ function Home(){
         loadPopularMovies()
     }, [])
 
-    function searchMovies(e){
+    async function handleMovies(e) {
         e.preventDefault()
-        alert(searchQuery)
+        
+        if (!searchQuery.trim()) return
+        if (loading) return
+
+        setLoading(true)
+        try {
+            const searchResults= await searchMovies(searchQuery)
+            setMovies(searchResults)
+            setError(null)
+        } catch(err){
+            console.log(err)
+            setError("Failed to search movies...")
+        }finally {
+            setLoading(false)
+        }
+
     }
     
     return (
         <div className="home">
-            <form onSubmit={searchMovies} className="search-form">
+            <form onSubmit={handleMovies} className="search-form">
                 <input type= "text" 
                 placeholder="Search for movies..." 
                 className="search-input"
@@ -39,10 +54,17 @@ function Home(){
                 />
                 <button type = "submit" className="search-button">Search</button>
             </form>
-            <div className="movies-grid">
+
+            
+
+            {loading? (<div className="loading"> Loading... </div>):
+            (
+                <div className="movies-grid">
                 {movies.map(movie => (
                     <MovieCard movie={movie} key={movie.id}/>))}
             </div>
+            )}
+
         </div>
     );
 }
