@@ -4,10 +4,10 @@
 
 <p>Here's an example of what the Home Page looks like.</p>
 <div align="center">
-  <img src="https://imgur.com/a/2kxCdHC"  />
+  <img src="https://i.imgur.com/17K0InC.png"  />
 </div>
 
 <p>Here's an example of what the Favorites Page looks like, with some of my top movies.</p>
 <div align="center">
-  <blockquote class="imgur-embed-pub" lang="en" data-id="a/bGf1kE7" data-context="false" ><a href="//imgur.com/a/bGf1kE7"></a></blockquote><script async src="//s.imgur.com/min/embed.js" charset="utf-8"></script>
+  <img src="https://i.imgur.com/kUFSMcX.png"  />
 </div>
